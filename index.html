@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hero Launch Event</title>
+<title>Hero Launch Event - KSA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -49,74 +50,6 @@ display: flex; gap: 16px; align-items: center;
 z-index: 1001;
 }
 body.rtl .controls-container { right: auto; left: 40px; }
-
-/* 客製化地區下拉選單 */
-.custom-dropdown {
-position: relative;
-min-width: 90px;
-user-select: none;
-}
-.dropdown-trigger {
-background: #fff;
-border: 1.5px solid #eee;
-border-radius: 50px;
-padding: 8px 16px;
-font-size: 13px;
-font-weight: 800;
-display: flex;
-align-items: center;
-justify-content: space-between;
-cursor: pointer;
-transition: all 0.2s ease;
-text-transform: uppercase;
-}
-.dropdown-trigger:hover { border-color: #000; }
-.dropdown-trigger::after {
-content: '';
-width: 8px; height: 5px;
-margin-left: 10px;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
-background-repeat: no-repeat;
-transition: transform 0.3s ease;
-}
-.custom-dropdown.open .dropdown-trigger::after { transform: rotate(180deg); }
-
-.dropdown-menu {
-position: absolute;
-top: calc(100% + 8px);
-right: 0;
-background: #fff;
-border-radius: 12px;
-box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-padding: 6px;
-min-width: 110px;
-opacity: 0;
-visibility: hidden;
-transform: translateY(10px);
-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-border: 1px solid #f0f0f0;
-}
-body.rtl .dropdown-menu { right: auto; left: 0; }
-.custom-dropdown.open .dropdown-menu {
-opacity: 1; visibility: visible; transform: translateY(0);
-}
-.dropdown-item {
-padding: 10px 14px;
-border-radius: 8px;
-font-size: 13px;
-font-weight: 600;
-cursor: pointer;
-text-align: left;
-transition: all 0.2s;
-color: #666;
-}
-body.rtl .dropdown-item { text-align: right; }
-.dropdown-item:hover { background: #f8f8f8; color: #000; }
-.dropdown-item.selected {
-color: #000;
-font-weight: 900;
-background: #f4f4f4;
-}
 
 /* 語言切換按鈕 */
 .lang-switcher {
@@ -223,7 +156,6 @@ body { padding-top: 55px; }
 header { padding: 10px 15px; justify-content: space-between; }
 .logo { font-size: 26px; }
 .controls-container { position: static; transform: none; gap: 8px; }
-.dropdown-trigger { padding: 5px 12px; font-size: 11px; }
 .lang-option { padding: 5px 10px; font-size: 10px; }
 h1 { font-size: 60px; letter-spacing: -2px; }
 .details-container { gap: 40px; flex-direction: column; margin-bottom: 0px; }
@@ -237,14 +169,6 @@ h1 { font-size: 60px; letter-spacing: -2px; }
 <header>
 <div class="logo">Hero.</div>
 <div class="controls-container">
-<!-- 自定義地區選單 -->
-<div class="custom-dropdown" id="regionDropdown">
-<div class="dropdown-trigger" id="regionCurrent">UAE</div>
-<div class="dropdown-menu">
-<div class="dropdown-item" data-value="uae" onclick="selectRegion('uae')">UAE</div>
-<div class="dropdown-item" data-value="ksa" onclick="selectRegion('ksa')">KSA</div>
-</div>
-</div>
 <!-- 語言切換選單 -->
 <div class="lang-switcher">
 <div class="lang-option active" id="btn-en" onclick="changeLanguage('en')">EN</div>
@@ -259,8 +183,8 @@ h1 { font-size: 60px; letter-spacing: -2px; }
 <img src="assets/images/Picture1.png" alt="Hero to the rescue" style="max-width: 100%; height: auto; margin-top: 20px;">
 <img src="assets/images/Arabic2.png" alt="Arabic Brand Title" style="max-width: 80%; height: auto; margin-top: -5px; display: block; margin-left: auto; margin-right: auto;">
 <p class="hero-desc" data-key="hero_desc">
-Hero™ Mighty Patch™ is the <strong>#1 Acne Patch Brand in the U.S.</strong> and now is coming to the KSA.
-The Hero™ of this story is you, we’re here to help you reveal it – one solution at a time.
+Hero™️ Mighty Patch™️ is the <strong>#1 Acne Patch Brand in the U.S.</strong> and now is coming to the KSA.
+The Hero™️ of this story is you, we’re here to help you reveal it – one solution at a time.
 No cover-ups, just clear results.
 </p>
 </div>
@@ -279,7 +203,7 @@ No cover-ups, just clear results.
 <div class="details-container">
 <div class="detail-item">
 <span class="detail-label" data-key="label_date">Date</span>
-<span class="detail-text" data-key="val_date">Jan 28, 2026</span>
+<span class="detail-text" data-key="val_date">Jan 21, 2026</span>
 </div>
 <div class="detail-item">
 <span class="detail-label" data-key="label_time">Time</span>
@@ -288,7 +212,7 @@ No cover-ups, just clear results.
 <div class="detail-item">
 <span class="detail-label" data-key="label_location">Location</span>
 <span class="detail-text">
-<a href="https://maps.app.goo.gl/zMuHUdcEm5d9ktAZA" target="_blank" data-key="val_location" id="map-link">Theatre of Digital Art (TODA)</a>
+<a href="https://maps.app.goo.gl/YE4hF5TajdzQEVM59" target="_blank" data-key="val_location" id="map-link">TeamLab Borderless Jeddah</a>
 </span>
 </div>
 </div>
@@ -300,7 +224,7 @@ No cover-ups, just clear results.
 <div class="experience-grid">
 <div class="experience-item">
 <div class="exp-header" data-key="exp_reveal_title">The Reveal</div>
-<div class="exp-desc" data-key="exp_reveal_desc">Discover the Mighty Patch™ — the product that made Hero™ the <span style="font-weight: 900;">#1</span> Acne Patch Brand in the U.S.</div>
+<div class="exp-desc" data-key="exp_reveal_desc">Discover the Mighty Patch™️ — the product that made Hero™️ the <span style="font-weight: 900;">#1</span> Acne Patch Brand in the U.S.</div>
 </div>
 <div class="experience-item">
 <div class="exp-header" data-key="exp_art_title">Immersive Art</div>
@@ -308,29 +232,25 @@ No cover-ups, just clear results.
 </div>
 <div class="experience-item">
 <div class="exp-header" data-key="exp_gift_title">Cocktails & Gifts</div>
-<div class="exp-desc" data-key="exp_gift_desc">Enjoy curated drinks, light bites, and exclusive Hero™ gift bags.</div>
+<div class="exp-desc" data-key="exp_gift_desc">Enjoy curated drinks, light bites, and exclusive Hero™️ gift bags.</div>
 </div>
 </div>
 </div>
 
 <!-- RSVP 區域 -->
 <div style="width: 100%; background-image: url('assets/images/Hero_Range_productsfixed.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 120px 20px; display: flex; justify-content: center; margin-top: -100px; position: relative; z-index: 10;">
-<!-- UPDATE: Padding bottom reduced to 10px for tight fit -->
 <div class="event-white-card" style="width: 90%; max-width: 600px; padding: 60px 20px 10px 20px; background-color: #231f20; color: #FFFFFF; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);">
 <h1 data-key="rsvp_title" style="color: #FFFFFF;">RSVP Now</h1>
 <div style="font-size: 14px; color: rgba(255, 255, 255, 0.7); margin-bottom: 40px; max-width: 400px; line-height: 1.5; padding: 0 20px; margin-top: 15px;" data-key="rsvp_disclaimer">
 This event is invitation-only.<br>Attendance will be confirmed by email.
 </div>
-<!-- UPDATE: margin-top: 20px added to push form down slightly -->
 <div class="rsvp-section" style="margin-bottom: 0; margin-top: 20px;">
-<!-- 注意：id 改為通用 id，src 初始為空，由 JS 控制 -->
-<!-- UPDATE: display: block added to remove inline gap -->
 <iframe
 id="rsvp-frame"
 title="Hero Event Sign-Up Form"
 allowtransparency="true"
 allow="geolocation; microphone; camera; fullscreen; payment"
-src=""
+src="https://form.jotform.com/253494690685068"
 frameborder="0"
 style="min-width:100%;max-width:100%;height:1150px;border:none;display:block;"
 scrolling="auto">
@@ -340,67 +260,15 @@ scrolling="auto">
 </div>
 
 <footer>
-<div class="copyright" data-key="footer_copy">© 2026 Hero™ Cosmetics Arabia</div>
+<div class="copyright" data-key="footer_copy">©️ 2026 Hero™️ Cosmetics Arabia</div>
 </footer>
 
 <script>
 const contentData = {
-uae: {
-en: {
-ready_headline: 'READY FOR THE <span style="font-weight: 900;">#1</span> ACNE BRAND?',
-hero_desc: 'Hero™ Mighty Patch™ is the <strong>#1 Acne Patch Brand in the U.S.</strong> and now is coming to the UAE. The Hero™ of this story is you, we’re here to help you reveal it – one solution at a time. No cover-ups, just clear results.',
-the_event_title: 'The Event',
-event_slogan: 'Don\'t pop it.<br>Patch it.',
-event_subtitle: 'Join us for the Immersive Launch Event experience in Dubai.',
-label_date: 'Date',
-val_date: 'Jan 28, 2026',
-label_time: 'Time',
-val_time: '6:00 PM – 9:30 PM',
-label_location: 'Location',
-val_location: 'Theatre of Digital Art (TODA)',
-map_url: 'https://maps.app.goo.gl/zMuHUdcEm5d9ktAZA',
-whats_in_event: 'WHAT\'S IN THE EVENT?',
-exp_reveal_title: 'The Reveal',
-exp_reveal_desc: 'Discover the Mighty Patch™ — the product that made Hero™ the <span style="font-weight: 900;">#1</span> Acne Patch Brand in the U.S.',
-exp_art_title: 'Immersive Art',
-exp_art_desc: 'Step into an immersive experience inspired by the world of Hero.',
-exp_gift_title: 'Cocktails & Gifts',
-exp_gift_desc: 'Enjoy curated drinks, light bites, and exclusive Hero™ gift bags.',
-rsvp_title: 'RSVP Now',
-rsvp_disclaimer: 'This event is invitation-only.<br>Attendance will be confirmed by email.',
-footer_copy: '© 2026 Hero™ Cosmetics Arabia',
-form_url: 'https://form.jotform.com/253494690685068' // UAE English Form
-},
-ar: {
-ready_headline: 'مستعد لعلامة الحبوب رقم 1؟',
-hero_desc: '™Hero™ Mighty Patch هي علامة لاصقات الحبوب رقم 1 في أمريكا والآن قادمة إلى الإمارات. بطل القصة هو أنت、وحلولنا تساعدك تطلّعه. بدون تغطية… بس نتائج واضحة.',
-the_event_title: 'حدث الإطلاق',
-event_slogan: 'لا تلمسينها… الزقيها',
-event_subtitle: 'انضموا إلينا لتجربة حدث إطلاق تفاعلية.',
-label_date: 'تاريخ',
-val_date: '٢٨ يناير ٢٠٢٦',
-label_time: 'الوقت',
-val_time: '٠٠ مساءً – ٩:٣٠ مساءً',
-label_location: 'المكان',
-val_location: 'Theatre of Digital Art (TODA)',
-map_url: 'https://maps.app.goo.gl/zMuHUdcEm5d9ktAZA',
-whats_in_event: 'ماذا يتضمن الحدث؟',
-exp_reveal_title: 'الإطلاق',
-exp_reveal_desc: 'اكتشف - ™Mighty Patch المنتج اللي خلّى ™Hero علامة لاصقات الحبوب رقم 1 في أمريكا',
-exp_art_title: 'فن غامر ',
-exp_art_desc: 'ادخل تجربة غامرة مستوحاة من عالم ™Hero ',
-exp_gift_title: 'كوكتيلات وهدايا',
-exp_gift_desc: 'استمتعوا بمشروبات مختارة、وجبات خفيفة、وحقائب هدايا حصرية من <span dir="ltr">Hero™</span>',
-rsvp_title: 'أكد حضورك الآن',
-rsvp_disclaimer: 'الحضور بدعوة فقط<br> .سيتم تأكيد الحضور عبر البريد الإلكتروني',
-footer_copy: '©2026 Hero™ Cosmetics Arabia',
-form_url: 'https://form.jotform.com/253506204055145' // UAE Arabic Form
-}
-},
 ksa: {
 en: {
 ready_headline: 'READY FOR THE <span style="font-weight: 900;">#1</span> ACNE BRAND?',
-hero_desc: 'Hero™ Mighty Patch™ is the <strong>#1 Acne Patch Brand in the U.S.</strong> and now is coming to the KSA. The Hero™ of this story is you, we’re here to help you reveal it – one solution at a time. No cover-ups, just clear results.',
+hero_desc: 'Hero™️ Mighty Patch™️ is the <strong>#1 Acne Patch Brand in the U.S.</strong> and now is coming to the KSA. The Hero™️ of this story is you, we’re here to help you reveal it – one solution at a time. No cover-ups, just clear results.',
 the_event_title: 'The Event',
 event_slogan: 'Don\'t pop it.<br>Patch it.',
 event_subtitle: 'Join us for the Immersive Launch Event experience in Jeddah.',
@@ -413,19 +281,19 @@ val_location: 'TeamLab Borderless Jeddah',
 map_url: 'https://maps.app.goo.gl/YE4hF5TajdzQEVM59',
 whats_in_event: 'WHAT\'S IN THE EVENT?',
 exp_reveal_title: 'The Reveal',
-exp_reveal_desc: 'Discover the Mighty Patch™ — the product that made Hero™ the <span style="font-weight: 900;">#1</span> Acne Patch Brand in the U.S.',
+exp_reveal_desc: 'Discover the Mighty Patch™️ — the product that made Hero™️ the <span style="font-weight: 900;">#1</span> Acne Patch Brand in the U.S.',
 exp_art_title: 'Immersive Art',
-exp_art_desc: 'Step into an immersive experience inspired by the world of Hero™.',
+exp_art_desc: 'Step into an immersive experience inspired by the world of Hero™️.',
 exp_gift_title: 'Cocktails & Gifts',
-exp_gift_desc: 'Enjoy curated drinks, light bites, and exclusive Hero™ gift bags.',
+exp_gift_desc: 'Enjoy curated drinks, light bites, and exclusive Hero™️ gift bags.',
 rsvp_title: 'RSVP Now',
 rsvp_disclaimer: 'This event is invitation-only.<br>Attendance will be confirmed by email.',
-footer_copy: '© 2026 Hero™ Cosmetics Arabia',
+footer_copy: '©️ 2026 Hero™️ Cosmetics Arabia',
 form_url: 'https://form.jotform.com/253494690685068' // KSA English Form
 },
 ar: {
 ready_headline: 'مستعد لعلامة الحبوب رقم 1؟',
-hero_desc: '™Hero ™Mighty Patch هي علامة لاصقات الحبوب رقم 1 في أمريكا والآن قادمة إلى السعودية. بطل القصة هو أنت、وحلولنا تساعدك تطلّعه. بدون تغطية… بس نتائج واضحة.',
+hero_desc: '™️Hero ™️Mighty Patch هي علامة لاصقات الحبوب رقم 1 في أمريكا والآن قادمة إلى السعودية. بطل القصة هو أنت、وحلولنا تساعدك تطلّعه. بدون تغطية… بس نتائج واضحة.',
 the_event_title: 'حدث الإطلاق',
 event_slogan: 'لا تلمسينها… الزقيها',
 event_subtitle: 'انضموا إلينا لتجربة حدث إطلاق تفاعلية.',
@@ -438,63 +306,23 @@ val_location: 'TeamLab Borderless Jeddah',
 map_url: 'https://maps.app.goo.gl/B7KGFERqkqVuePuc6?g_st=ipc',
 whats_in_event: 'ماذا يتضمن الحدث؟',
 exp_reveal_title: 'الإطلاق',
-exp_reveal_desc: 'اكتشف - ™Mighty Patch المنتج اللي خلّى ™Hero علامة لاصقات الحبوب رقم 1 في أمريكا',
+exp_reveal_desc: 'اكتشف - ™️Mighty Patch المنتج اللي خلّى ™️Hero علامة لاصقات الحبوب رقم 1 في أمريكا',
 exp_art_title: 'فن غامر ',
-exp_art_desc: 'ادخل تجربة غامرة مستوحاة من عالم ™Hero ',
+exp_art_desc: 'ادخل تجربة غامرة مستوحاة من عالم ™️Hero ',
 exp_gift_title: 'كوكتيلات وهدايا',
-exp_gift_desc: 'استمتعوا بمشروبات مختارة、وجبات خفيفة、وحقائب هدايا حصرية من <span dir="ltr">Hero™</span>',
+exp_gift_desc: 'استمتعوا بمشروبات مختارة、وجبات خفيفة、وحقائب هدايا حصرية من <span dir="ltr">Hero™️</span>',
 rsvp_title: 'أكد حضورك الآن',
 rsvp_disclaimer: 'الحضور بدعوة فقط<br> .سيتم تأكيد الحضور عبر البريد الإلكتروني',
-footer_copy: '©2026 Hero™ Cosmetics Arabia',
+footer_copy: '©️2026 Hero™️ Cosmetics Arabia',
 form_url: 'https://form.jotform.com/253506204055145' // KSA Arabic Form
 }
 }
 };
 
-let currentRegion = 'uae';
+const currentRegion = 'ksa';
 let currentLang = 'en';
 
-// 自定義下拉選單邏輯
-const dropdown = document.getElementById('regionDropdown');
-const trigger = document.getElementById('regionCurrent');
-
-trigger.addEventListener('click', (e) => {
-e.stopPropagation();
-dropdown.classList.toggle('open');
-});
-
-document.addEventListener('click', () => {
-dropdown.classList.remove('open');
-});
-
-function selectRegion(val) {
-currentRegion = val;
-trigger.innerText = val.toUpperCase();
-// 更新 UI 中的選中狀態
-document.querySelectorAll('.dropdown-item').forEach(item => {
-item.classList.remove('selected');
-if(item.getAttribute('data-value') === val) item.classList.add('selected');
-});
-updateContent();
-dropdown.classList.remove('open');
-}
-
 function init() {
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.has('region')) {
-const param = urlParams.get('region').toLowerCase();
-if (contentData[param]) currentRegion = param;
-} else {
-try {
-const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-if (timeZone.includes("Riyadh") || timeZone.includes("Saudi")) currentRegion = 'ksa';
-} catch (e) {}
-}
-trigger.innerText = currentRegion.toUpperCase();
-document.querySelectorAll('.dropdown-item').forEach(item => {
-if(item.getAttribute('data-value') === currentRegion) item.classList.add('selected');
-});
-
 updateContent();
 }
 
@@ -514,10 +342,8 @@ if (data[key]) el.innerHTML = data[key];
 const mapLink = document.getElementById('map-link');
 if (mapLink && data.map_url) mapLink.href = data.map_url;
 
-// --- 新增：動態切換表單 ---
 const formFrame = document.getElementById('rsvp-frame');
 if (formFrame && data.form_url) {
-// 只有當 URL 改變時才重新載入，避免閃爍
 if (formFrame.src !== data.form_url) {
 formFrame.src = data.form_url;
 }
