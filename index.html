@@ -237,7 +237,12 @@ h1 { font-size: 60px; letter-spacing: -2px; }
 <header>
 <div class="logo">Hero.</div>
 <div class="controls-container">
-
+<!-- 自定義地區選單 -->
+<div class="custom-dropdown" id="regionDropdown">
+<div class="dropdown-trigger" id="regionCurrent">UAE</div>
+<div class="dropdown-menu">
+<div class="dropdown-item" data-value="uae" onclick="selectRegion('uae')">UAE</div>
+<div class="dropdown-item" data-value="ksa" onclick="selectRegion('ksa')">KSA</div>
 </div>
 </div>
 <!-- 語言切換選單 -->
